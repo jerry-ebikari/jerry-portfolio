@@ -1,0 +1,16 @@
+<sui-sidebar-container class="ui bottom attached segment">
+  <sui-sidebar 
+    class="inverted primary vertical"
+    [isVisible]="isVisible"
+    [transition]="transition"
+    #sidebar>
+      <a class="item">1</a>
+      <a class="item">2</a>
+  </sui-sidebar>
+  <sui-sidebar-sibling [isDimmedWhenVisible]="isDimmedWhenVisible">
+      <header class="header">
+          <i (click)="sidebar.toggle()" class="clickable sidebar icon"></i>
+      </header>
+      <router-outlet></router-outlet>
+  </sui-sidebar-sibling>
+</sui-sidebar-container>
