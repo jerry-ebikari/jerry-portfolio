@@ -1,16 +1,83 @@
-<sui-sidebar-container class="ui bottom attached segment">
+<i 
+  *ngIf="isMobile() && !isVisible" (click)="sidebar.toggle()"
+  class="sidebar-menu-icon clickable sidebar icon"
+></i>
+<i
+  *ngIf="isMobile() && isVisible" (click)="sidebar.toggle()"
+  class="sidebar-menu-icon clickable close icon"
+></i>
+<sui-sidebar-container
+  (window:resize)="resize(sidebar)"
+  class="ui bottom attached segment"
+>
   <sui-sidebar 
-    class="inverted primary vertical"
-    [isVisible]="isVisible"
+    class="inverted vertical"
+    [(isVisible)]="isVisible"
     [transition]="transition"
+    [direction]="direction"
+    [ngStyle]="sidebarStyles"
     #sidebar>
-      <a class="item">1</a>
-      <a class="item">2</a>
+    <nav class="sidenav flex flex-column align-items-center">
+      <div class="logo">
+        EJ
+      </div>
+      <div class="navlinks flex flex-column align-items-center">
+        <!-- HOME -->
+        <div
+          class="navlink"
+          (click)="navlinkClicked()"
+          routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{exact: true}"
+        >
+          <i class="home icon"></i>
+          <span>Home</span>
+        </div>
+        <!-- ABOUT -->
+        <div
+          class="navlink"
+          (click)="navlinkClicked()"
+          routerLink="/about"
+          routerLinkActive="active"
+        >
+          <i class="user icon"></i>
+          <span>About</span>
+        </div>
+        <!-- PROJECTS -->
+        <div
+          class="navlink"
+          (click)="navlinkClicked()"
+          routerLink="/projects"
+          routerLinkActive="active"
+        >
+          <i class="folder icon"></i>
+          <span>Projects</span>
+        </div>
+        <!-- CONTACT -->
+        <div
+          class="navlink"
+          (click)="navlinkClicked()"
+          routerLink="/contact"
+          routerLinkActive="active"
+        >
+          <i class="address card icon"></i>
+          <span>Contact</span>
+        </div>
+        <button class="green-outline-button resume-btn">
+          Resume
+        </button>
+      </div>
+      </nav>
   </sui-sidebar>
-  <sui-sidebar-sibling [isDimmedWhenVisible]="isDimmedWhenVisible">
+  <sui-sidebar-sibling
+    [isDimmedWhenVisible]="isDimmedWhenVisible"
+    [ngStyle]="sidebarSiblingStyles"
+    (click)="!isMobile() ? sidebar.open() : ''"
+  >
       <header class="header">
-          <i (click)="sidebar.toggle()" class="clickable sidebar icon"></i>
       </header>
-      <router-outlet></router-outlet>
+      <div class="page-container">
+        <router-outlet></router-outlet>
+      </div>
   </sui-sidebar-sibling>
 </sui-sidebar-container>
