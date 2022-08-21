@@ -4,10 +4,13 @@
     --light-navy: #112240;
     --lightest-navy: #233554;
     --slate: #8892b0;
-    --light-slate: #a8b2d1;
+    // --light-slate: #a8b2d1;
+    --light-slate: #8892b0;
     --lightest-slate: #ccd6f6;
     --white: #e6f1ff;
     --green: #64ffda;
+    --font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+    --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
 }
 
 *,
@@ -39,7 +42,7 @@ body {
 }
 
 .justify-content-end {
-    justify-content: end;
+    justify-content: flex-end;
 }
 
 .justify-content-center {
@@ -58,6 +61,18 @@ body {
     cursor: pointer;
 }
 
+.green {
+    color: var(--green);
+}
+
+.lightest-slate {
+    color: var(--lightest-slate);
+}
+
+.light-slate {
+    color: var(--light-slate);
+}
+
 .green-outline-button {
     height: 40px;
     background-color: transparent;
@@ -66,7 +81,12 @@ body {
     border-radius: 4px;
     padding: 0 10px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
     &:hover {
         background-color: rgba($color: #64ffda, $alpha: 0.1);
+        color: var(--green);
     }
 }

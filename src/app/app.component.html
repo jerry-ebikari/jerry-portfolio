@@ -18,8 +18,10 @@
     [direction]="direction"
     [ngStyle]="sidebarStyles"
     #sidebar>
-    <nav class="sidenav flex flex-column align-items-center">
-      <div class="logo">
+    <nav
+      class="sidenav flex flex-column align-items-center"
+      [ngStyle]="{paddingTop: isMobile() ? '40px': 0}">
+      <div *ngIf="!isMobile()" class="logo">
         EJ
       </div>
       <div class="navlinks flex flex-column align-items-center">
@@ -64,9 +66,9 @@
           <i class="address card icon"></i>
           <span>Contact</span>
         </div>
-        <button class="green-outline-button resume-btn">
+        <a href="/assets/resume.pdf" target="_blank" class="green-outline-button resume-btn">
           Resume
-        </button>
+        </a>
       </div>
       </nav>
   </sui-sidebar>
@@ -75,7 +77,10 @@
     [ngStyle]="sidebarSiblingStyles"
     (click)="!isMobile() ? sidebar.open() : ''"
   >
-      <header class="header">
+      <header *ngIf="isMobile()" class="header">
+        <div class="mobile-logo">
+          EJ
+        </div>
       </header>
       <div class="page-container">
         <router-outlet></router-outlet>
