@@ -8,6 +8,9 @@ import { HomeComponent } from './home/home.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SkillsComponent } from './skills/skills.component';
+import { SkillCardComponent } from './skill-card/skill-card.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +18,16 @@ import { AboutComponent } from './about/about.component';
     HomeComponent,
     ProjectsComponent,
     ContactComponent,
-    AboutComponent
+    AboutComponent,
+    SkillsComponent,
+    SkillCardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SuiModule
+    SuiModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

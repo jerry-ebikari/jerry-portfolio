@@ -12,4 +12,8 @@ export class AboutComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  isMobile() {
+    return window.innerWidth < 768;
+  }
+
 }

@@ -1,1 +1,44 @@
-<p>contact works!</p>
+<h1 class="title">Get in touch</h1>
+<form class="ui segment form" [formGroup]="contactForm" [class.error]="contactForm.touched && contactForm.invalid">
+    <div class="two fields">
+        <div class="required field" [class.error]="checkTouched('name') && checkError('name')">
+            <label for="name">Name</label>
+            <input
+                type="text"
+                name="name"
+                placeholder="Enter name"
+                formControlName="name"
+            >
+            <div *ngIf="checkTouched('name') && checkError('name')" class="error">
+                <small class="error-text">Enter name</small>
+            </div>
+        </div>
+        <div class="required field" [class.error]="checkTouched('email') && checkError('email')">
+            <label for="email">Email</label>
+            <input
+                type="email"
+                name="email"
+                placeholder="Enter email address"
+                formControlName="email"
+            >
+            <div *ngIf="checkTouched('email') && checkError('email')" class="error">
+                <small *ngIf="checkError('email')!['required']" class="error-text">Enter email</small>
+                <small *ngIf="checkError('email')!['email']" class="error-text">Enter a valid email address</small>
+            </div>
+        </div>
+    </div>
+    <div class="required field" [class.error]="checkTouched('message') && checkError('message')">
+        <label for="message">Message</label>
+        <textarea
+            name="message"
+            cols="30"
+            rows="10"
+            placeholder="Write message here"
+            formControlName="message">
+        </textarea>
+        <div *ngIf="checkTouched('message') && checkError('message')" class="error">
+            <small class="error-text">Enter message</small>
+        </div>
+    </div>
+    <button class="green-outline-button" [disabled]="contactForm.invalid">Send</button>
+</form>

@@ -24,6 +24,22 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.sidebarSetup()
     this.setSidebarAndContentWidth()
+    // this.fetchEmailResponse().then(res => console.log(res)).catch(err => console.log(err))
+  }
+
+  fetchEmailResponse = async () => {
+    let res = await fetch('https://formsubmit.co/lekarane@gmail.com', {
+    // let res = await fetch('https://formsubmit.co/742cbb766c6be646d152251ecca36bd6', {
+      method: 'POST',
+      body: JSON.stringify({
+        name: 'Jerry',
+        email: 'jerryebikarineedam@gmail.com',
+        message: 'Test',
+        _autoresponse: 'Email received'
+      })
+    });
+    // console.log(res);
+    return res;
   }
 
   @HostListener('window:resize', ['$event'])

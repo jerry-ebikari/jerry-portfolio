@@ -1,0 +1,11 @@
+.title {
+    text-transform: capitalize;
+    margin-top: 60px;
+    font-size: clamp(30px, 6vw, 40px);
+    display: flex;
+    align-items: baseline;
+    padding: 0 !important;
+    column-gap: 10px;
+    color: var(--lightest-slate);
+    // color: var(--green);
+}

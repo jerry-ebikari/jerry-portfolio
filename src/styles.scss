@@ -89,4 +89,45 @@ body {
         background-color: rgba($color: #64ffda, $alpha: 0.1);
         color: var(--green);
     }
+    &:disabled {
+        cursor: not-allowed;
+        background-color: var(--navy) !important;
+        color: var(--slate) !important;
+    }
+}
+
+.field {
+    input,
+    textarea {
+        border: none !important;
+        outline: 1px solid var(--green) !important;
+        background-color: var(--navy) !important;
+        color: var(--green) !important;
+    }
+
+    label {
+        color: var(--lightest-slate) !important;
+        font-size: 16px !important;
+    }
+
+    &.error {
+        input, textarea {
+            outline: 1px solid red !important;
+            color: red !important;
+        }
+
+        label {
+            color: red !important;
+        }
+    } 
+    
+}
+
+.ui.segment {
+    background-color: var(--light-navy) !important;
+    border: 1px solid var(--green);
+}
+
+.error-text {
+    color: red;
 }
