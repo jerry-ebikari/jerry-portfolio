@@ -1,1 +1,12 @@
-<p>skill-card works!</p>
+<div class="card-container" [ngStyle]="{borderColor: color}">
+    <div class="card-image">
+        <i [ngClass]="['icon', iconName]" [ngStyle]="{color: color}"></i>
+    </div>
+    <div class="card-title" [ngStyle]="{
+        backgroundColor: color,
+        color: darkText ? 'var(--navy)' : 'var(--lightest-slate)',
+        height: '48px'
+    }">
+        <h2>{{title}}</h2>
+    </div>
+</div>

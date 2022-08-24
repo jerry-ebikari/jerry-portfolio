@@ -1,1 +1,10 @@
-<p>skills works!</p>
+<h1 class="title">Skills</h1>
+<div class="cards-container">
+    <app-skill-card
+        *ngFor="let card of cards"
+        [iconName]="card.iconName"
+        [title]="card.title"
+        [color]="card.color"
+        [darkText]="card!.darkText"
+    ></app-skill-card>
+</div>

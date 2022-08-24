@@ -1,0 +1,25 @@
+.card-container {
+    background-color: var(--lightest-slate);
+    background-color: #fff;
+    width: fit-content;
+    border: 3px solid var(--green);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+i.icon {
+    font-size: clamp(120px, 25vw, 150px);
+}
