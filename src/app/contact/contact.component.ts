@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import emailjs, {EmailJSResponseStatus} from '@emailjs/browser';
 
 @Component({
   selector: 'app-contact',
@@ -8,6 +9,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class ContactComponent implements OnInit {
   contactForm: FormGroup = new FormGroup({});
+  submitted: boolean = false;
 
   constructor() { }
 
@@ -25,6 +27,22 @@ export class ContactComponent implements OnInit {
 
   checkTouched(formControlName: string) {
     return this.contactForm.get(formControlName)?.touched;
+  }
+
+  sendEmail(contactForm: HTMLFormElement) {
+    if (this.contactForm.valid) {
+      this.submitted = true;
+      emailjs.sendForm('service_ko084z7', 'contact_form', contactForm, 'Rhc2S3ZDKH_ZNJIb2')
+        .then((result: EmailJSResponseStatus) => {
+          this.submitted = false;
+          console.log(result.text);
+          this.contactForm.reset();
+        }, (error) => {
+          this.submitted = false;
+          console.log(error.text);
+        });
+    }
+    
   }
 
 }
