@@ -8,6 +8,8 @@ import emailjs, {EmailJSResponseStatus} from '@emailjs/browser';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
+  success: boolean = false;
+  sent: boolean = false;
   contactForm: FormGroup = new FormGroup({});
   submitted: boolean = false;
 
@@ -37,8 +39,20 @@ export class ContactComponent implements OnInit {
           this.submitted = false;
           console.log(result.text);
           this.contactForm.reset();
+          this.sent = true;
+          this.success = true;
+          let t = setInterval(() => {
+            this.success = false;
+            clearInterval(t);
+          }, 3000);
         }, (error) => {
           this.submitted = false;
+          this.sent = false;
+          this.success = true;
+          let t = setInterval(() => {
+            this.success = false;
+            clearInterval(t);
+          }, 3000);
           console.log(error.text);
         });
     }
