@@ -21,8 +21,11 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
     background-color: var(--navy) !important;
+    padding: 0 !important;
+    overflow: hidden;
+    height: 100%;
 }
 
 .clickable {

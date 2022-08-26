@@ -18,6 +18,7 @@ export class AppComponent implements OnInit {
   sidebarSiblingStyles: any = {
     'overflow-y': 'auto',
     'max-height': '100%',
+    'height': '100% !important',
     'background-color': 'var(--navy)'
   }
 
