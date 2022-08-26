@@ -31,14 +31,16 @@ img {
     width: clamp(150px, 50%, 300px);
     object-fit: contain;
     border-radius: 10px;
-    outline: 2px solid var(--green);
+    // outline: 2px solid var(--green);
+    border: none;
+    box-shadow: 0 0 0 2px var(--green);
+    outline: none;
     margin: 0 30px 30px 0;
 }
 
 
 @media (max-width: 768px) {
         img {
-            outline: 2px solid var(--green);
             width: 100px;
             float: none;
             margin: 0;
