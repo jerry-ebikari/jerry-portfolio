@@ -9,3 +9,44 @@
     color: var(--lightest-slate);
     // color: var(--green);
 }
+
+
+
+.ui.cards {
+    margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+    .title {
+        margin-top: 60px;
+    }
+    .ui.cards {
+        margin-top: 50px;
+    }   
+}
+
+.ui.card {
+    outline: 3px solid var(--lightest-slate) !important;
+    .content {
+        background-color: var(--light-navy) !important;
+        .meta {
+            color: var(--lightest-slate) !important;
+        }
+        .header {
+            color: var(--lightest-slate);
+        }
+    }
+    .ui.slide.image {
+        position: relative;
+        &::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: #64ffda, $alpha: 0.1);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 9;
+        }
+    }
+}
