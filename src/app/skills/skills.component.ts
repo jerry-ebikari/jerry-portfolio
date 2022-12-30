@@ -43,10 +43,12 @@ export class SkillsComponent implements OnInit {
       iconName: 'react',
       color: '#5ed3f4',
       darkText: true
-    },
-    
-    
-    
+    }, 
+    {
+      title: 'Git',
+      iconName: 'github',
+      color: '#0e2535'
+    }
   ]
   constructor() { }
 
