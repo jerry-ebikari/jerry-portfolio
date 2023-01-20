@@ -22,7 +22,7 @@
     <nav
       class="sidenav flex flex-column align-items-center"
       [ngStyle]="{paddingTop: isMobile() ? '40px': 0}">
-      <div *ngIf="!isMobile()" class="logo">
+      <div *ngIf="!isMobile()" class="logo" routerLink="/">
         EJ
       </div>
       <div class="navlinks flex flex-column align-items-center">
@@ -89,7 +89,7 @@
     (click)="!isMobile() ? sidebar.open() : ''"
   >
       <header *ngIf="isMobile()" class="header">
-        <div class="mobile-logo">
+        <div class="mobile-logo" routerLink="/">
           EJ
         </div>
       </header>
