@@ -1,6 +1,7 @@
 <div class="card-container" [ngStyle]="{borderColor: color}">
     <div class="card-image">
-        <i [ngClass]="['icon', iconName]" [ngStyle]="{color: color}"></i>
+        <i *ngIf="!imgName" [ngClass]="['icon', iconName]" [ngStyle]="{color: color}"></i>
+        <img *ngIf="imgName" [src]="'assets/skill/' + imgName" [alt]="imgName">
     </div>
     <div class="card-title" [ngStyle]="{
         backgroundColor: color,

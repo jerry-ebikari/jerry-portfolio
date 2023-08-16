@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 interface card {
   title: string,
-  iconName: string,
+  iconName?: string,
   color: string,
-  darkText?: boolean
+  darkText?: boolean,
+  imgName?: string
 }
 @Component({
   selector: 'app-skills',
@@ -48,6 +49,12 @@ export class SkillsComponent implements OnInit {
       title: 'Git',
       iconName: 'github',
       color: '#0e2535'
+    },
+    {
+      title: 'Node Js',
+      imgName: 'node.jpeg',
+      color: '#83cd2a',
+      darkText: true
     }
   ]
   constructor() { }
