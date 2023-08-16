@@ -44,11 +44,6 @@ export class SkillsComponent implements OnInit {
       iconName: 'react',
       color: '#5ed3f4',
       darkText: true
-    }, 
-    {
-      title: 'Git',
-      iconName: 'github',
-      color: '#0e2535'
     },
     {
       title: 'Node Js',
@@ -68,6 +63,16 @@ export class SkillsComponent implements OnInit {
       color: '#e96e00'
     },
     {
+      title: 'Java Play',
+      imgName: 'play.svg',
+      color: '#456125'
+    },
+    {
+      title: 'Spring Boot',
+      imgName: 'springboot.png',
+      color: '#6aac3b'
+    },
+    {
       title: 'MySQL',
       imgName: 'mysql.svg',
       color: '#01678d'
@@ -77,6 +82,11 @@ export class SkillsComponent implements OnInit {
       imgName: 'postgresql.svg',
       color: '#69778f'
     },
+    {
+      title: 'Git',
+      iconName: 'github',
+      color: '#0e2535'
+    }
   ]
   constructor() { }
 
