@@ -55,7 +55,28 @@ export class SkillsComponent implements OnInit {
       imgName: 'node.jpeg',
       color: '#83cd2a',
       darkText: true
-    }
+    },
+    {
+      title: 'MongoDB',
+      imgName: 'mongodb.svg',
+      color: '#04ed65',
+      darkText: true
+    },
+    {
+      title: 'Java',
+      imgName: 'java.png',
+      color: '#e96e00'
+    },
+    {
+      title: 'MySQL',
+      imgName: 'mysql.svg',
+      color: '#01678d'
+    },
+    {
+      title: 'PostgreSQL',
+      imgName: 'postgresql.svg',
+      color: '#69778f'
+    },
   ]
   constructor() { }
 
