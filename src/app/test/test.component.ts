@@ -10,7 +10,7 @@ export class TestComponent implements OnInit {
 
   liveBaseUrl = "https://uzbmhwri7wzrdri7iso263vdse0lclnm.lambda-url.us-east-2.on.aws/api/v1/";
   devBaseUrl = "https://euscd328hf.execute-api.us-east-2.amazonaws.com/api/v1/";
-  personalBaseUrl = "https://b4iz6xw4a6u5e2ybna6r3tnd440nsuaj.lambda-url.us-east-2.on.aws/api/v1/";
+  personalBaseUrl = "https://7vo02i2k39.execute-api.us-east-2.amazonaws.com/api/v1/";
   baseUrl = this.liveBaseUrl;
   output = "Output";
   loading: boolean = false;
