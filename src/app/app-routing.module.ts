@@ -13,7 +13,6 @@ const routes: Routes = [
   {path: 'contact', component: ContactComponent},
   {path: 'projects', component: ProjectsComponent},
   {path: 'skills', component: SkillsComponent},
-  {path: 'test', component: TestComponent},
   {path: '**', redirectTo: ''}
 ];
 
