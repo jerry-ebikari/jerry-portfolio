@@ -45,7 +45,6 @@ export class TestComponent implements OnInit {
     this.http.get(this.baseUrl+ "applications", { headers }).subscribe({
       next: (res: any) => {
         this.output = "SUCCESSFULLY RETRIEVED APPLICATION LIST";
-        this.token = res['token'];
         this.loading = false
       },
       error: (error: any) => {
