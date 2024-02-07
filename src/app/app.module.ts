@@ -12,7 +12,6 @@ import { AboutComponent } from './about/about.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SkillsComponent } from './skills/skills.component';
 import { SkillCardComponent } from './skill-card/skill-card.component';
-import { TestComponent } from './test/test.component';
 
 @NgModule({
   declarations: [
@@ -22,8 +21,7 @@ import { TestComponent } from './test/test.component';
     ContactComponent,
     AboutComponent,
     SkillsComponent,
-    SkillCardComponent,
-    TestComponent
+    SkillCardComponent
   ],
   imports: [
     BrowserModule,
