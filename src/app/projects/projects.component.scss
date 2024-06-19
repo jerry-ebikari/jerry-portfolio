@@ -43,6 +43,7 @@
     .ui.slide.image {
         position: relative;
         height: 300px;
+        object-fit: contain;
         &::after {
             content: '';
             width: 100%;
