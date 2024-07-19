@@ -38,3 +38,69 @@
         margin-top: 50px;
     }   
 }
+
+
+/* To remove: From about */
+*::before,
+*::after {
+    transition: all 0.5s;
+}
+
+.ui.card {
+    p {
+        color: var(--lightest-slate);
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+.title {
+    text-transform: capitalize;
+    margin-top: 40px;
+    font-size: clamp(30px, 6vw, 40px);
+    display: flex;
+    align-items: baseline;
+    padding: 0 !important;
+    column-gap: 10px;
+    color: var(--lightest-slate);
+}
+.section {
+    margin-top: 20px;
+}
+@media (min-width: 768px) {
+    .title {
+        margin-top: 60px;
+    }
+    .section {
+        margin-top: 50px;
+    }   
+}
+
+
+img {
+    float: left;
+    width: clamp(150px, 50%, 300px);
+    object-fit: contain;
+    border-radius: 10px;
+    // outline: 2px solid var(--green);
+    border: none;
+    box-shadow: 0 0 0 2px var(--green);
+    outline: none;
+    margin: 0 30px 30px 0;
+}
+
+
+@media (max-width: 768px) {
+        img {
+            width: 100px;
+            float: none;
+            margin: 0;
+        }
+}
+
+.about-text {
+    font-size: 20px;
+    font-family: var(--font-sans);
+    font-weight: 400;
+    line-height: 40px;
+}
